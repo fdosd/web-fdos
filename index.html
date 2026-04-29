@@ -16,7 +16,7 @@
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
-      --bg:#F0EEE9;--bg2:#E8E4DC;--white:#FAFAF7;
+      --bg:#F4F2EE;--bg2:#EDEAE4;--white:#FAFAF7;
       --ink:#1C1A17;--mid:#7A7670;--soft:#C8C3B8;
       --accent:#9B8EDF;--accent2:#C4B8F7;
     }
@@ -38,7 +38,7 @@
     .site-logo{
       position:fixed;top:0;left:0;z-index:600;
       padding:30px 40px;
-      font-size:14px;font-weight:600;letter-spacing:.01em;
+      font-size:15px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
       color:white;transition:color .4s;
       pointer-events:none;
       opacity:0;animation:fadeDown .7s ease forwards .1s;
@@ -54,7 +54,7 @@
       opacity:0;animation:fadeDown .7s ease forwards .15s;
     }
     .site-nav a{
-      font-size:11px;font-weight:400;letter-spacing:.08em;
+      font-size:12px;font-weight:400;letter-spacing:.08em;
       text-transform:uppercase;color:rgba(255,255,255,.62);
       text-decoration:none;transition:color .2s;
     }
@@ -120,7 +120,7 @@
       opacity:0;animation:fadeUp .9s ease forwards .4s;
     }
     .hero-tag{
-      display:inline-block;font-size:10px;font-weight:300;
+      display:inline-block;font-size:11px;font-weight:300;
       letter-spacing:.18em;text-transform:uppercase;
       color:rgba(255,255,255,.5);
       border:1px solid rgba(255,255,255,.2);
@@ -134,14 +134,14 @@
     .hero-title .b{font-weight:600}
     .hero-title .i{font-weight:200;font-style:italic;color:rgba(255,255,255,.48)}
     .hero-sub{
-      margin-top:18px;font-size:14px;font-weight:300;
+      margin-top:18px;font-size:15px;font-weight:300;
       color:rgba(255,255,255,.52);max-width:360px;line-height:1.8;
     }
     /* Original scroll hint */
     .scroll-hint{
       position:absolute;bottom:54px;right:48px;z-index:2;
       display:flex;align-items:center;gap:12px;
-      color:rgba(255,255,255,.36);font-size:10px;
+      color:rgba(255,255,255,.36);font-size:11px;
       letter-spacing:.14em;text-transform:uppercase;
       opacity:0;animation:fadeUp .8s ease forwards .9s;
     }
@@ -165,22 +165,22 @@
       will-change:transform;
     }
     .intro-eyebrow{
-      font-size:10px;font-weight:300;letter-spacing:.18em;
+      font-size:11px;font-weight:300;letter-spacing:.18em;
       text-transform:uppercase;color:var(--accent);margin-bottom:22px;
     }
     .intro-title{
-      font-size:clamp(32px,3.8vw,54px);
+      font-size:clamp(28px,3.2vw,50px);
       font-weight:200;line-height:1.1;letter-spacing:-.025em;
       color:var(--ink);margin-bottom:24px;
     }
     .intro-body{
-      font-size:14px;font-weight:300;line-height:1.65;color:#2e2b27;
+      font-size:16px;font-weight:300;line-height:1.65;color:#2e2b27;
       font-family:'Poppins',sans-serif;
     }
     .intro-body + .intro-body{margin-top:16px}
     .intro-cta{
       display:inline-flex;align-items:center;gap:10px;
-      margin-top:32px;font-size:13px;font-weight:400;
+      margin-top:32px;font-size:15px;font-weight:400;
       color:white;background:var(--accent);
       text-decoration:none;padding:11px 22px;border-radius:100px;
       transition:background .2s,transform .2s;
@@ -209,7 +209,7 @@
       margin-bottom:28px;
     }
     .gal-label{
-      font-size:10px;font-weight:300;letter-spacing:.16em;
+      font-size:12px;font-weight:300;letter-spacing:.16em;
       text-transform:uppercase;color:rgba(255,255,255,.3);
     }
     /* Two rows of thumbnails — natural horizontal flow */
@@ -268,12 +268,12 @@
     }
     .gi:hover .gi-meta{background:rgba(20,18,14,.68)}
     .gi-name{
-      font-size:13px;font-weight:400;color:white;
+      font-size:14px;font-weight:400;color:white;
       opacity:0;transform:translateY(6px);
       transition:opacity .25s,transform .25s;
     }
     .gi-cat{
-      font-size:9px;font-weight:300;letter-spacing:.1em;
+      font-size:11px;font-weight:300;letter-spacing:.1em;
       text-transform:uppercase;color:var(--accent2);margin-top:3px;
       opacity:0;transform:translateY(4px);
       transition:opacity .25s .04s,transform .25s .04s;
@@ -308,7 +308,7 @@
     }
     /* About typography mirrors intro exactly */
     .about-eyebrow{
-      font-size:10px;font-weight:300;letter-spacing:.18em;
+      font-size:11px;font-weight:300;letter-spacing:.18em;
       text-transform:uppercase;color:var(--accent);margin-bottom:22px;
     }
     .about-h2{
@@ -317,7 +317,7 @@
       color:var(--ink);margin-bottom:24px;
     }
     .about-body{
-      font-size:14px;font-weight:300;line-height:1.65;
+      font-size:16px;font-weight:300;line-height:1.65;
       color:#2e2b27;max-width:none;
       font-family:'Poppins',sans-serif;
     }
@@ -325,7 +325,7 @@
     .about-body strong{color:var(--ink);font-weight:400}
     .about-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:32px}
     .tag{
-      font-size:10px;font-weight:300;letter-spacing:.1em;
+      font-size:12px;font-weight:300;letter-spacing:.1em;
       text-transform:uppercase;color:var(--mid);
       border:1px solid var(--soft);padding:4px 11px;border-radius:100px;
       transition:border-color .2s,color .2s;
@@ -333,7 +333,7 @@
     .tag:hover{border-color:var(--accent);color:var(--accent)}
     .about-cta{
       margin-top:32px;display:inline-flex;align-items:center;gap:10px;
-      font-size:13px;font-weight:400;color:white;background:var(--accent);
+      font-size:15px;font-weight:400;color:white;background:var(--accent);
       text-decoration:none;padding:11px 22px;border-radius:100px;width:fit-content;
       transition:background .2s,transform .2s;
     }
@@ -351,7 +351,7 @@
       opacity:.25;filter:saturate(0) brightness(.6);
     }
     .end-content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:24px}
-    .end-eyebrow{font-size:10px;font-weight:300;letter-spacing:.2em;
+    .end-eyebrow{font-size:12px;font-weight:300;letter-spacing:.2em;
       text-transform:uppercase;color:var(--accent)}
     .end-title{font-size:clamp(36px,5vw,72px);font-weight:600;
       letter-spacing:-.03em;color:white;line-height:1.1;}
@@ -363,12 +363,12 @@
       padding-bottom:2px;transition:color .2s}
     .end-mail:hover{color:var(--accent2)}
     .end-cta{display:inline-flex;align-items:center;gap:10px;
-      font-size:13px;font-weight:400;color:white;background:var(--accent);
+      font-size:15px;font-weight:400;color:white;background:var(--accent);
       text-decoration:none;padding:11px 22px;border-radius:100px;
       transition:background .2s,transform .2s}
     .end-cta:hover{background:#8a7cd0;transform:translateY(-2px)}
     .end-foot{position:absolute;bottom:28px;display:flex;gap:20px;align-items:center}
-    .end-foot span,.end-foot a{font-size:11px;color:rgba(255,255,255,.2);
+    .end-foot span,.end-foot a{font-size:12px;color:rgba(255,255,255,.2);
       text-decoration:none;transition:color .2s;padding:8px 4px;}
     .end-foot a:hover{color:rgba(255,255,255,.55)}
 
@@ -381,7 +381,7 @@
     /* ══ PANEL COUNTER + ARROWS ══ */
     .panel-counter{
       position:fixed;bottom:18px;right:44px;
-      font-size:11px;letter-spacing:.1em;
+      font-size:12px;letter-spacing:.1em;
       color:rgba(255,255,255,.28);z-index:300;
       display:flex;align-items:center;gap:10px;
     }
@@ -391,7 +391,7 @@
     .pc-arrow{
       background:none;border:none;
       color:rgba(255,255,255,.28);
-      font-size:13px;cursor:none;padding:0;
+      font-size:14px;cursor:none;padding:0;
       transition:color .2s;line-height:1;
       font-family:inherit;
     }
@@ -439,9 +439,9 @@
       position:relative;z-index:2;
     }
     .lb-cap{display:flex;gap:12px;align-items:baseline;min-width:0;flex:1}
-    .lb-name{font-size:14px;font-weight:400;color:white;
+    .lb-name{font-size:15px;font-weight:400;color:white;
       white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .lb-cat{font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+    .lb-cat{font-size:11px;letter-spacing:.1em;text-transform:uppercase;
       color:var(--accent2);white-space:nowrap}
 
     /* Close — top right, above everything */
@@ -449,7 +449,7 @@
       position:fixed;top:18px;right:18px;
       width:36px;height:36px;
       background:rgba(255,255,255,.1);border:none;border-radius:50%;
-      color:white;font-size:15px;cursor:none;
+      color:white;font-size:16px;cursor:none;
       display:flex;align-items:center;justify-content:center;
       transition:background .2s;z-index:8002;
     }
@@ -519,8 +519,8 @@
       }
 
       /* LOGO */
-      .site-logo{
-        font-size:13px;
+      ..site-logo{
+        font-size:15px;
         padding:20px 20px;
       }
 
@@ -528,7 +528,8 @@
       .site-nav{display:none}
       .mob-nav{
         position:fixed;top:0;right:0;z-index:600;
-        padding:16px 20px;
+        padding:20px 20px;
+        display:flex;align-items:center;
       }
       .mob-burger{
         background:none;border:none;cursor:pointer;
@@ -586,7 +587,7 @@
       .panel-counter{
         display:block;
         bottom:20px;right:16px;
-        font-size:10px;
+        font-size:11px;
       }
 
       /* INTRO */
@@ -622,7 +623,7 @@
       .about-panel{flex-direction:column;min-height:auto}
       .about-img-col{flex:none;height:70svh}
       .about-text{padding:40px 28px 56px;max-width:100%}
-      .about-h2,.intro-title{font-size:clamp(26px,7vw,36px)}
+      .about-h2,.intro-title{font-size:clamp(23px,6.5vw,33px)}
 
       /* END */
       .end-panel{min-height:80svh;padding:80px 28px 60px}
@@ -655,14 +656,14 @@
     .legal-close:hover{color:var(--ink)}
     .legal-back{
       display:inline-flex;align-items:center;gap:8px;
-      font-size:11px;font-weight:400;letter-spacing:.1em;
+      font-size:12px;font-weight:400;letter-spacing:.1em;
       text-transform:uppercase;color:var(--accent);
       text-decoration:none;margin-bottom:48px;
       transition:gap .2s;
     }
     .legal-back:hover{gap:12px}
     .legal-eyebrow{
-      font-size:10px;font-weight:300;letter-spacing:.18em;
+      font-size:11px;font-weight:300;letter-spacing:.18em;
       text-transform:uppercase;color:var(--accent);margin-bottom:16px;
     }
     .legal-h1{
@@ -676,17 +677,17 @@
       color:var(--ink);margin:36px 0 12px;
     }
     .legal-h3{
-      font-size:14px;font-weight:400;
+      font-size:15px;font-weight:400;
       color:var(--ink);margin:24px 0 8px;
     }
     .legal-p{
-      font-size:15px;font-weight:200;line-height:1.85;
+      font-size:16px;font-weight:200;line-height:1.85;
       color:var(--mid);margin-bottom:12px;
     }
     .legal-p a{color:var(--accent);text-decoration:none}
     .legal-p a:hover{text-decoration:underline}
     .legal-caps{
-      font-size:13px;font-weight:300;line-height:1.7;
+      font-size:14px;font-weight:300;line-height:1.7;
       color:var(--mid);text-transform:uppercase;
       letter-spacing:.04em;margin-bottom:12px;
     }
@@ -696,7 +697,7 @@
       border-bottom:1px solid var(--bg2);
     }
     .legal-tab{
-      font-size:12px;font-weight:400;letter-spacing:.1em;
+      font-size:13px;font-weight:400;letter-spacing:.1em;
       text-transform:uppercase;color:var(--mid);
       padding:10px 20px;cursor:none;border:none;
       background:none;border-bottom:2px solid transparent;
@@ -946,7 +947,7 @@
         <span class="tag">Banner</span>
         <span class="tag">Visual Design</span>
       </div>
-      <a class="about-cta" href="mailto:hi@fdosdall.de">Let's go! →</a>
+      <a class="about-cta" href="#" onclick="goTo(4)">Let's go! →</a>
     </div>
   </div>
 
@@ -1497,4 +1498,4 @@
 </script>
 
 </body>
-</html> 
+</html>
