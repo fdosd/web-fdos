@@ -16,7 +16,7 @@
   <style>
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     :root{
-      --bg:#F4F2EE;--bg2:#EDEAE4;--white:#FAFAF7;
+      --bg:#F0EEE9;--bg2:#E8E4DC;--white:#FAFAF7;
       --ink:#1C1A17;--mid:#7A7670;--soft:#C8C3B8;
       --accent:#9B8EDF;--accent2:#C4B8F7;
     }
@@ -38,7 +38,7 @@
     .site-logo{
       position:fixed;top:0;left:0;z-index:600;
       padding:30px 40px;
-      font-size:14px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+      font-size:14px;font-weight:600;letter-spacing:.01em;
       color:white;transition:color .4s;
       pointer-events:none;
       opacity:0;animation:fadeDown .7s ease forwards .1s;
@@ -165,22 +165,22 @@
       will-change:transform;
     }
     .intro-eyebrow{
-      font-size:11px;font-weight:300;letter-spacing:.18em;
+      font-size:10px;font-weight:300;letter-spacing:.18em;
       text-transform:uppercase;color:var(--accent);margin-bottom:22px;
     }
     .intro-title{
-      font-size:clamp(28px,3.2vw,50px);
+      font-size:clamp(32px,3.8vw,54px);
       font-weight:200;line-height:1.1;letter-spacing:-.025em;
       color:var(--ink);margin-bottom:24px;
     }
     .intro-body{
-      font-size:15px;font-weight:300;line-height:1.65;color:#2e2b27;
+      font-size:14px;font-weight:300;line-height:1.65;color:#2e2b27;
       font-family:'Poppins',sans-serif;
     }
     .intro-body + .intro-body{margin-top:16px}
     .intro-cta{
       display:inline-flex;align-items:center;gap:10px;
-      margin-top:32px;font-size:14px;font-weight:400;
+      margin-top:32px;font-size:13px;font-weight:400;
       color:white;background:var(--accent);
       text-decoration:none;padding:11px 22px;border-radius:100px;
       transition:background .2s,transform .2s;
@@ -209,7 +209,7 @@
       margin-bottom:28px;
     }
     .gal-label{
-      font-size:11px;font-weight:300;letter-spacing:.16em;
+      font-size:10px;font-weight:300;letter-spacing:.16em;
       text-transform:uppercase;color:rgba(255,255,255,.3);
     }
     /* Two rows of thumbnails — natural horizontal flow */
@@ -273,7 +273,7 @@
       transition:opacity .25s,transform .25s;
     }
     .gi-cat{
-      font-size:10px;font-weight:300;letter-spacing:.1em;
+      font-size:9px;font-weight:300;letter-spacing:.1em;
       text-transform:uppercase;color:var(--accent2);margin-top:3px;
       opacity:0;transform:translateY(4px);
       transition:opacity .25s .04s,transform .25s .04s;
@@ -308,7 +308,7 @@
     }
     /* About typography mirrors intro exactly */
     .about-eyebrow{
-      font-size:11px;font-weight:300;letter-spacing:.18em;
+      font-size:10px;font-weight:300;letter-spacing:.18em;
       text-transform:uppercase;color:var(--accent);margin-bottom:22px;
     }
     .about-h2{
@@ -317,7 +317,7 @@
       color:var(--ink);margin-bottom:24px;
     }
     .about-body{
-      font-size:15px;font-weight:300;line-height:1.65;
+      font-size:14px;font-weight:300;line-height:1.65;
       color:#2e2b27;max-width:none;
       font-family:'Poppins',sans-serif;
     }
@@ -325,7 +325,7 @@
     .about-body strong{color:var(--ink);font-weight:400}
     .about-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:32px}
     .tag{
-      font-size:11px;font-weight:300;letter-spacing:.1em;
+      font-size:10px;font-weight:300;letter-spacing:.1em;
       text-transform:uppercase;color:var(--mid);
       border:1px solid var(--soft);padding:4px 11px;border-radius:100px;
       transition:border-color .2s,color .2s;
@@ -333,7 +333,7 @@
     .tag:hover{border-color:var(--accent);color:var(--accent)}
     .about-cta{
       margin-top:32px;display:inline-flex;align-items:center;gap:10px;
-      font-size:14px;font-weight:400;color:white;background:var(--accent);
+      font-size:13px;font-weight:400;color:white;background:var(--accent);
       text-decoration:none;padding:11px 22px;border-radius:100px;width:fit-content;
       transition:background .2s,transform .2s;
     }
@@ -351,7 +351,7 @@
       opacity:.25;filter:saturate(0) brightness(.6);
     }
     .end-content{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;gap:24px}
-    .end-eyebrow{font-size:11px;font-weight:300;letter-spacing:.2em;
+    .end-eyebrow{font-size:10px;font-weight:300;letter-spacing:.2em;
       text-transform:uppercase;color:var(--accent)}
     .end-title{font-size:clamp(36px,5vw,72px);font-weight:600;
       letter-spacing:-.03em;color:white;line-height:1.1;}
@@ -363,7 +363,7 @@
       padding-bottom:2px;transition:color .2s}
     .end-mail:hover{color:var(--accent2)}
     .end-cta{display:inline-flex;align-items:center;gap:10px;
-      font-size:14px;font-weight:400;color:white;background:var(--accent);
+      font-size:13px;font-weight:400;color:white;background:var(--accent);
       text-decoration:none;padding:11px 22px;border-radius:100px;
       transition:background .2s,transform .2s}
     .end-cta:hover{background:#8a7cd0;transform:translateY(-2px)}
@@ -381,7 +381,7 @@
     /* ══ PANEL COUNTER + ARROWS ══ */
     .panel-counter{
       position:fixed;bottom:18px;right:44px;
-      font-size:12px;letter-spacing:.1em;
+      font-size:11px;letter-spacing:.1em;
       color:rgba(255,255,255,.28);z-index:300;
       display:flex;align-items:center;gap:10px;
     }
@@ -412,7 +412,7 @@
 
     /* Scrollable image area */
     .lb-scroll{
-      flex:1;overflow:hidden;
+      flex:1;overflow:auto;
       display:flex;align-items:center;justify-content:center;
       width:100%;min-height:0;
       cursor:none;
@@ -421,7 +421,7 @@
       display:block;
       max-height:100%;max-width:100%;
       object-fit:contain;border-radius:6px;
-      transition:width .3s ease, height .3s ease;
+      transition:max-width .25s ease, max-height .25s ease;
       animation:lbImgIn .28s ease;
       user-select:none;flex-shrink:0;
       cursor:zoom-in;
@@ -438,10 +438,10 @@
       background:rgba(16,14,11,.94);
       position:relative;z-index:2;
     }
-    .lb-cap{display:flex;gap:12px;align-items:baseline;min-width:0;flex:1;justify-content:center;}
-    .lb-name{font-size:15px;font-weight:400;color:white;
+    .lb-cap{display:flex;gap:12px;align-items:baseline;min-width:0;flex:1}
+    .lb-name{font-size:14px;font-weight:400;color:white;
       white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-    .lb-cat{font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    .lb-cat{font-size:10px;letter-spacing:.1em;text-transform:uppercase;
       color:var(--accent2);white-space:nowrap}
 
     /* Close — top right, above everything */
@@ -519,22 +519,16 @@
       }
 
       /* LOGO */
-      ..site-logo{
-        font-size:14px;
+      .site-logo{
+        font-size:13px;
         padding:20px 20px;
       }
 
       /* NAV — hidden on mobile, hamburger instead */
       .site-nav{display:none}
-      .mob-header{
-        position:fixed;top:0;left:0;right:0;z-index:600;
-        display:flex;align-items:center;justify-content:space-between;
-        padding:16px 20px;
-      }
       .mob-nav{
         position:fixed;top:0;right:0;z-index:600;
-        padding:20px 20px;
-        display:flex;align-items:center;
+        padding:16px 20px;
       }
       .mob-burger{
         background:none;border:none;cursor:pointer;
@@ -668,7 +662,7 @@
     }
     .legal-back:hover{gap:12px}
     .legal-eyebrow{
-      font-size:11px;font-weight:300;letter-spacing:.18em;
+      font-size:10px;font-weight:300;letter-spacing:.18em;
       text-transform:uppercase;color:var(--accent);margin-bottom:16px;
     }
     .legal-h1{
@@ -813,30 +807,113 @@
 
   <!-- ══ GALLERY (dunkel, breiter) ══ -->
   <div class="panel gallery-panel" id="p2">
-    <div class="gallery-bg" id="gallery-bg"></div>
+    <div class="gallery-bg"></div>
     <div class="gal-header">
       <span class="gal-label">Ausgewählte Projekte</span>
       <span class="gal-label">Klick zum Vergrößern</span>
     </div>
     <div class="gal-rows" id="gal-grid">
       <div class="gal-row">
-      <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/immoscout.jfif" data-name="ImmobilienScout24" data-cat="UX/UI · Webdesign" data-year="2023"><div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/immoscout.jfif" alt="ImmobilienScout24" loading="lazy"/></div><div class="gi-meta"><span class="gi-name">ImmobilienScout24</span><span class="gi-cat">UX/UI · Webdesign · 2023</span></div></div>
-      <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/yoga01.jfif" data-name="Jules & Paul Yoga" data-cat="Webdesign" data-year="2024"><div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/yoga01.jfif" alt="Jules & Paul Yoga" loading="lazy"/></div><div class="gi-meta"><span class="gi-name">Jules & Paul Yoga</span><span class="gi-cat">Webdesign · 2024</span></div></div>
-      <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/mockup.webp" data-name="Swiss Greenrose" data-cat="Branding" data-year="2024"><div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/mockup.webp" alt="Swiss Greenrose" loading="lazy"/></div><div class="gi-meta"><span class="gi-name">Swiss Greenrose</span><span class="gi-cat">Branding · 2024</span></div></div>
-      <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/bank.jfif" data-name="Die Bankvermittler" data-cat="Webdesign" data-year="2023"><div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/bank.jfif" alt="Die Bankvermittler" loading="lazy"/></div><div class="gi-meta"><span class="gi-name">Die Bankvermittler</span><span class="gi-cat">Webdesign · 2023</span></div></div>
-      <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/bachhof_entwurf.jpg" data-name="Bachhof Resort" data-cat="Logo Design" data-year="2022"><div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/bachhof_entwurf.jpg" alt="Bachhof Resort" loading="lazy"/></div><div class="gi-meta"><span class="gi-name">Bachhof Resort</span><span class="gi-cat">Logo Design · 2022</span></div></div>
-      <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/ssv.jfif" data-name="Radwelt SSV" data-cat="Print · Flyer" data-year="2022"><div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/ssv.jfif" alt="Radwelt SSV" loading="lazy"/></div><div class="gi-meta"><span class="gi-name">Radwelt SSV</span><span class="gi-cat">Print · Flyer · 2022</span></div></div>
-      <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/immo.jfif" data-name="Ricasa Immobilien" data-cat="Webdesign" data-year="2024"><div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/immo.jfif" alt="Ricasa Immobilien" loading="lazy"/></div><div class="gi-meta"><span class="gi-name">Ricasa Immobilien</span><span class="gi-cat">Webdesign · 2024</span></div></div>
-      <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/nails.jfif" data-name="Beauty Nails" data-cat="Webdesign" data-year="2023"><div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/nails.jfif" alt="Beauty Nails" loading="lazy"/></div><div class="gi-meta"><span class="gi-name">Beauty Nails</span><span class="gi-cat">Webdesign · 2023</span></div></div>
+        <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/immoscout.jfif" data-name="ImmobilienScout24" data-cat="Landingpage" data-year="2023">
+        <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/immoscout.jfif" alt="ImmobilienScout24" loading="lazy"/></div>
+        <div class="gi-meta">
+          <span class="gi-name">ImmobilienScout24</span>
+          <span class="gi-cat">Landingpage · 2023</span>
+        </div>
+      </div>
+        <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/yoga02.jfif" data-name="Jules & Paul Yoga" data-cat="Webdesign" data-year="2024">
+        <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/yoga02.jfif" alt="Jules & Paul Yoga" loading="lazy"/></div>
+        <div class="gi-meta">
+          <span class="gi-name">Jules & Paul Yoga</span>
+          <span class="gi-cat">Webdesign · 2024</span>
+        </div>
+      </div>
+        <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/mockup.webp" data-name="Swiss Green Rose" data-cat="Logo Entwurf" data-year="2024">
+        <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/mockup.webp" alt="Swiss Green Rose" loading="lazy"/></div>
+        <div class="gi-meta">
+          <span class="gi-name">Swiss Green Rose</span>
+          <span class="gi-cat">Logo Entwurf · 2024</span>
+        </div>
+      </div>
+        <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/bank.jfif" data-name="Die Bankvermittler" data-cat="Webdesign" data-year="2023">
+        <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/bank.jfif" alt="Die Bankvermittler" loading="lazy"/></div>
+        <div class="gi-meta">
+          <span class="gi-name">Die Bankvermittler</span>
+          <span class="gi-cat">Webdesign · 2023</span>
+        </div>
+      </div>
+        <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/bachhof_entwurf.jpg" data-name="Bachhof Resort" data-cat="Logo Design" data-year="2022">
+        <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/bachhof_entwurf.jpg" alt="Bachhof Resort" loading="lazy"/></div>
+        <div class="gi-meta">
+          <span class="gi-name">Bachhof Resort</span>
+          <span class="gi-cat">Logo Design · 2022</span>
+        </div>
+      </div>
+        <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/ssv.jfif" data-name="Radwelt SSV" data-cat="Print Kampagne" data-year="2022">
+        <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/ssv.jfif" alt="Radwelt SSV" loading="lazy"/></div>
+        <div class="gi-meta">
+          <span class="gi-name">Radwelt SSV</span>
+          <span class="gi-cat">Print Kampagne · 2022</span>
+        </div>
+      </div>
+        <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/immo.jfif" data-name="Ricasa Immobilien" data-cat="Webdesign" data-year="2024">
+        <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/immo.jfif" alt="Ricasa Immobilien" loading="lazy"/></div>
+        <div class="gi-meta">
+          <span class="gi-name">Ricasa Immobilien</span>
+          <span class="gi-cat">Webdesign · 2024</span>
+        </div>
+      </div>
       </div>
       <div class="gal-row">
-      <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/app.jfif" data-name="Symptoms App" data-cat="UX/UI" data-year="2017"><div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/app.jfif" alt="Symptoms App" loading="lazy"/></div><div class="gi-meta"><span class="gi-name">Symptoms App</span><span class="gi-cat">UX/UI · 2017</span></div></div>
-      <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/meridian.png" data-name="Meridian Pflegedienst" data-cat="Print · Branding" data-year="2021"><div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/meridian.png" alt="Meridian Pflegedienst" loading="lazy"/></div><div class="gi-meta"><span class="gi-name">Meridian Pflegedienst</span><span class="gi-cat">Print · Branding · 2021</span></div></div>
-      <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/info.jfif" data-name="Epic Fail Party" data-cat="Print · Infografik" data-year="2014"><div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/info.jfif" alt="Epic Fail Party" loading="lazy"/></div><div class="gi-meta"><span class="gi-name">Epic Fail Party</span><span class="gi-cat">Print · Infografik · 2014</span></div></div>
-      <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/demo.jfif" data-name="Glitzer fürs Volk" data-cat="Print · Plakat" data-year="2015"><div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/demo.jfif" alt="Glitzer fürs Volk" loading="lazy"/></div><div class="gi-meta"><span class="gi-name">Glitzer fürs Volk</span><span class="gi-cat">Print · Plakat · 2015</span></div></div>
-      <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/blueberry-ai.png" data-name="Blueberry AI" data-cat="Branding" data-year="2024"><div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/blueberry-ai.png" alt="Blueberry AI" loading="lazy"/></div><div class="gi-meta"><span class="gi-name">Blueberry AI</span><span class="gi-cat">Branding · 2024</span></div></div>
-      <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/sketch.jfif" data-name="Selbstportrait" data-cat="Illustration" data-year="2016"><div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/sketch.jfif" alt="Selbstportrait" loading="lazy"/></div><div class="gi-meta"><span class="gi-name">Selbstportrait</span><span class="gi-cat">Illustration · 2016</span></div></div>
-      <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/yoga02.jfif" data-name="Jules & Paul Yoga" data-cat="Webdesign" data-year="2024"><div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/yoga02.jfif" alt="Jules & Paul Yoga" loading="lazy"/></div><div class="gi-meta"><span class="gi-name">Jules & Paul Yoga</span><span class="gi-cat">Webdesign · 2024</span></div></div>
+        <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/app.jfif" data-name="Pacemaker App" data-cat="Prototyp" data-year="2017">
+        <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/app.jfif" alt="Pacemaker App" loading="lazy"/></div>
+        <div class="gi-meta">
+          <span class="gi-name">Pacemaker App</span>
+          <span class="gi-cat">Prototyp · 2017</span>
+        </div>
+      </div>
+        <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/meridian.png" data-name="Meridian Pflegedienst" data-cat="Print" data-year="2021">
+        <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/meridian.png" alt="Meridian Pflegedienst" loading="lazy"/></div>
+        <div class="gi-meta">
+          <span class="gi-name">Meridian Pflegedienst</span>
+          <span class="gi-cat">Print · 2021</span>
+        </div>
+      </div>
+        <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/info.jfif" data-name="Epic Fail Party" data-cat="Print · Infografik" data-year="2014">
+        <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/info.jfif" alt="Epic Fail Party" loading="lazy"/></div>
+        <div class="gi-meta">
+          <span class="gi-name">Epic Fail Party</span>
+          <span class="gi-cat">Print · Infografik · 2014</span>
+        </div>
+      </div>
+        <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/demo.jfif" data-name="Glitzer fürs Volk" data-cat="Print · Plakat" data-year="2015">
+        <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/demo.jfif" alt="Glitzer fürs Volk" loading="lazy"/></div>
+        <div class="gi-meta">
+          <span class="gi-name">Glitzer fürs Volk</span>
+          <span class="gi-cat">Print · Plakat · 2015</span>
+        </div>
+      </div>
+        <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/blueberry-ai.png" data-name="Blueberry AI" data-cat="Learning AI" data-year="2024">
+        <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/blueberry-ai.png" alt="Blueberry AI" loading="lazy"/></div>
+        <div class="gi-meta">
+          <span class="gi-name">Blueberry AI</span>
+          <span class="gi-cat">Learning AI · 2024</span>
+        </div>
+      </div>
+        <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/sketch.jfif" data-name="Sketch" data-cat="Illustration" data-year="2016">
+        <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/sketch.jfif" alt="Sketch" loading="lazy"/></div>
+        <div class="gi-meta">
+          <span class="gi-name">Sketch</span>
+          <span class="gi-cat">Illustration · 2016</span>
+        </div>
+      </div>
+        <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/yoga01.jfif" data-name="Jules & Paul Yoga" data-cat="Webdesign" data-year="2024">
+        <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/yoga01.jfif" alt="Jules & Paul Yoga" loading="lazy"/></div>
+        <div class="gi-meta">
+          <span class="gi-name">Jules & Paul Yoga</span>
+          <span class="gi-cat">Webdesign · 2024</span>
+        </div>
+      </div>
       </div>
     </div>
   </div>
@@ -1136,29 +1213,17 @@
   function setZoom(on) {
     zoomed = on;
     if (on) {
-      // Remove size constraints — image renders at its natural pixel size
       lbi.style.maxWidth  = 'none';
       lbi.style.maxHeight = 'none';
-      lbi.style.width     = lbi.naturalWidth  + 'px';
-      lbi.style.height    = lbi.naturalHeight + 'px';
-      lbi.style.cursor    = 'zoom-out';
-      lbScroll.style.overflow        = 'auto';
-      lbScroll.style.alignItems      = 'flex-start';
-      lbScroll.style.justifyContent  = 'flex-start';
-      // Scroll to center
-      requestAnimationFrame(()=>{
-        lbScroll.scrollLeft = (lbScroll.scrollWidth  - lbScroll.clientWidth)  / 2;
-        lbScroll.scrollTop  = (lbScroll.scrollHeight - lbScroll.clientHeight) / 2;
-      });
+      lbScroll.style.alignItems     = 'flex-start';
+      lbScroll.style.justifyContent = 'flex-start';
+      lbi.style.cursor = 'zoom-out';
     } else {
       lbi.style.maxWidth  = '100%';
       lbi.style.maxHeight = '100%';
-      lbi.style.width     = 'auto';
-      lbi.style.height    = 'auto';
-      lbi.style.cursor    = 'zoom-in';
-      lbScroll.style.overflow       = 'hidden';
       lbScroll.style.alignItems     = 'center';
       lbScroll.style.justifyContent = 'center';
+      lbi.style.cursor = 'zoom-in';
     }
   }
 
@@ -1432,4 +1497,4 @@
 </script>
 
 </body>
-</html>
+</html> 
