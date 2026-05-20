@@ -225,8 +225,8 @@
       background:var(--ink);
       display:flex;flex-direction:column;
       justify-content:center;
-      padding:52px 160px 48px;
-      width:auto;min-width:100vw;
+      padding:52px 7vw 48px;
+      width:100vw;min-width:0;max-width:100vw;box-sizing:border-box;
     }
     .gallery-bg{
       position:absolute;inset:-8% -4%;
@@ -241,6 +241,13 @@
       display:flex;justify-content:space-between;align-items:baseline;
       margin-bottom:28px;
     }
+    .gal-download{
+      font-size:11px;font-weight:300;letter-spacing:.12em;
+      text-transform:uppercase;color:rgba(255,255,255,.35);
+      text-decoration:none;border-bottom:1px solid rgba(255,255,255,.2);
+      padding-bottom:1px;transition:color .2s,border-color .2s;
+    }
+    .gal-download:hover{color:white;border-color:white;}
     .gal-label{
       font-size:12px;font-weight:300;letter-spacing:.16em;
       text-transform:uppercase;color:rgba(255,255,255,.3);
@@ -251,7 +258,7 @@
       display:flex;flex-direction:column;gap:7px;
     }
     .gal-row{
-      display:flex;flex-direction:row;gap:6px;height:220px;
+      display:flex;flex-direction:row;gap:6px;height:clamp(140px,18vh,220px);
     }
     .gi{
       flex:1 1 auto;min-width:80px;
@@ -539,9 +546,9 @@
       .lb-prev,.lb-next{bottom:80px;top:auto;}
 
       /* gallery mobile */
-      .gallery-panel{padding:40px 40px 48px;width:100%;min-width:0;}
-      .gal-row{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;}
-      .gal-row .gi{aspect-ratio:1/1;height:auto;min-width:0;}
+      .gallery-panel{padding:32px 16px 40px;width:100%;min-width:0;}
+      .gal-row{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;height:auto;}
+      .gal-row .gi{aspect-ratio:1/1;height:auto;min-width:0;overflow:hidden;}
 
 
       /* Switch to normal vertical scroll */
@@ -793,17 +800,17 @@
 </div>
 
 <!-- LOGO fixed top left -->
-<div class="site-logo" id="site-logo">
+<div class="site-logo" id="site-logo" onclick="isMobile()?mobGoTo(0):goTo(0,'nav');return false" style="cursor:pointer;">
   Franziska Dosdall
 </div>
 
 <!-- NAV fixed top right -->
 <nav class="site-nav" id="site-nav">
-  <a href="#" onclick="goTo(0);return false">Home</a>
-  <a href="#" onclick="goTo(1);return false">Info</a>
-  <a href="#" onclick="isMobile()?mobGoTo(2):goTo(2);return false">Work</a>
-  <a href="#" onclick="goTo(3);return false">Über mich</a>
-  <a href="#" onclick="goTo(4);return false">Kontakt</a>
+  <a href="#" onclick="goTo(0,'nav');return false">Home</a>
+  <a href="#" onclick="goTo(1,'nav');return false">Info</a>
+  <a href="#" onclick="isMobile()?mobGoTo(2):goTo(2,'nav');return false">Work</a>
+  <a href="#" onclick="goTo(3,'nav');return false">Über mich</a>
+  <a href="#" onclick="goTo(4,'nav');return false">Kontakt</a>
 </nav>
 
 <div class="sc" id="sc">
@@ -855,7 +862,7 @@
         Setting von Anwendungen, Hardware und OS einzulassen und stehe auch aufkommenden
         Technologien und Themen neugierig und vorbehaltlos gegenüber.
       </p>
-      <a class="intro-cta" href="#" onclick="isMobile()?mobGoTo(2):goTo(2);return false">Arbeiten ansehen →</a>
+      <a class="intro-cta" href="#" onclick="isMobile()?mobGoTo(2):goTo(2,'nav');return false">Arbeiten ansehen →</a>
     </div>
   </div>
 
@@ -864,6 +871,7 @@
     <div class="gallery-bg"></div>
     <div class="gal-header">
       <span class="gal-label">Einige Projekte / work in progress</span>
+      <a class="gal-download" href="portfolio.pdf" download target="_blank">Portfolio herunterladen ↓</a>
     </div>
     <div class="gal-rows" id="gal-grid">
       <div class="gal-row">
@@ -871,42 +879,42 @@
         <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/immoscout.jfif" alt="ImmobilienScout24" loading="lazy"/></div>
         <div class="gi-meta">
           <span class="gi-name">ImmobilienScout24</span>
-          <span class="gi-cat">Landingpage · 2023</span>
+          <span class="gi-cat">Landingpage</span>
         </div>
       </div>
         <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/yoga02.jfif" data-name="Jules & Paul Yoga" data-cat="Webdesign" data-year="2024">
         <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/yoga02.jfif" alt="Jules & Paul Yoga" loading="lazy"/></div>
         <div class="gi-meta">
           <span class="gi-name">Jules & Paul Yoga</span>
-          <span class="gi-cat">Webdesign · 2024</span>
+          <span class="gi-cat">Webdesign</span>
         </div>
       </div>
         <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/mockup.webp" data-name="Swiss Green Rose" data-cat="Logo Entwurf" data-year="2024">
         <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/mockup.webp" alt="Swiss Green Rose" loading="lazy"/></div>
         <div class="gi-meta">
           <span class="gi-name">Swiss Green Rose</span>
-          <span class="gi-cat">Logo Entwurf · 2024</span>
+          <span class="gi-cat">Logo Entwurf</span>
         </div>
       </div>
         <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/bank.jfif" data-name="Die Bankvermittler" data-cat="Webdesign" data-year="2023">
         <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/bank.jfif" alt="Die Bankvermittler" loading="lazy"/></div>
         <div class="gi-meta">
           <span class="gi-name">Die Bankvermittler</span>
-          <span class="gi-cat">Webdesign · 2023</span>
+          <span class="gi-cat">Webdesign</span>
         </div>
       </div>
         <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/bachhof_entwurf.jpg" data-name="Bachhof Resort" data-cat="Logo Design" data-year="2022">
         <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/bachhof_entwurf.jpg" alt="Bachhof Resort" loading="lazy"/></div>
         <div class="gi-meta">
           <span class="gi-name">Bachhof Resort</span>
-          <span class="gi-cat">Logo Design · 2022</span>
+          <span class="gi-cat">Logo Design</span>
         </div>
       </div>
         <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/ssv.jfif" data-name="Radwelt SSV" data-cat="Print Kampagne" data-year="2022">
         <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/ssv.jfif" alt="Radwelt SSV" loading="lazy"/></div>
         <div class="gi-meta">
           <span class="gi-name">Radwelt SSV</span>
-          <span class="gi-cat">Print Kampagne · 2022</span>
+          <span class="gi-cat">Print Kampagne</span>
         </div>
       </div>
       </div>
@@ -915,21 +923,21 @@
         <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/immo.jfif" alt="Ricasa Immobilien" loading="lazy"/></div>
         <div class="gi-meta">
           <span class="gi-name">Ricasa Immobilien</span>
-          <span class="gi-cat">Webdesign · 2024</span>
+          <span class="gi-cat">Webdesign</span>
         </div>
       </div>
         <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/app.jfif" data-name="Pacemaker App" data-cat="Prototyp" data-year="2017">
         <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/app.jfif" alt="Pacemaker App" loading="lazy"/></div>
         <div class="gi-meta">
           <span class="gi-name">Pacemaker App</span>
-          <span class="gi-cat">Prototyp · 2017</span>
+          <span class="gi-cat">Prototyp</span>
         </div>
       </div>
         <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/meridian.png" data-name="Meridian Pflegedienst" data-cat="Print" data-year="2021">
         <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/meridian.png" alt="Meridian Pflegedienst" loading="lazy"/></div>
         <div class="gi-meta">
           <span class="gi-name">Meridian Pflegedienst</span>
-          <span class="gi-cat">Print · 2021</span>
+          <span class="gi-cat">Print</span>
         </div>
       </div>
         <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/info.jfif" data-name="Epic Fail Party" data-cat="Print · Infografik" data-year="2014">
@@ -943,14 +951,14 @@
         <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/blueberry-ai.png" alt="Blueberry AI" loading="lazy"/></div>
         <div class="gi-meta">
           <span class="gi-name">Blueberry AI</span>
-          <span class="gi-cat">Learning AI · 2024</span>
+          <span class="gi-cat">Learning AI</span>
         </div>
       </div>
         <div class="gi" data-src="https://fdosd.github.io/web-fdos/image/sketch.jfif" data-name="Sketch" data-cat="Illustration" data-year="2016">
         <div class="gi-img"><img src="https://fdosd.github.io/web-fdos/image/sketch.jfif" alt="Sketch" loading="lazy"/></div>
         <div class="gi-meta">
           <span class="gi-name">Sketch</span>
-          <span class="gi-cat">Illustration · 2016</span>
+          <span class="gi-cat">Illustration</span>
         </div>
       </div>
       </div>
@@ -985,7 +993,7 @@
         <span class="tag">Banner</span>
         <span class="tag">Visual Design</span>
       </div>
-      <a class="about-cta" href="#" onclick="isMobile()?mobGoTo(4):goTo(4);return false">Let's go! →</a>
+      <a class="about-cta" href="#" onclick="isMobile()?mobGoTo(4):goTo(4,'nav');return false">Let's go! →</a>
     </div>
   </div>
 
@@ -1002,7 +1010,7 @@
       </div>
     </div>
     <div class="end-foot">
-      <span>© 2025 Franziska Dosdall</span>
+      <span>© <span id="footer-year">2026</span> Franziska Dosdall</span>
       <a href="#impressum" onclick="openLegal('impressum');return false">Impressum</a>
       <a href="#datenschutz" onclick="openLegal('datenschutz');return false">Datenschutz</a>
     </div>
@@ -1039,6 +1047,10 @@
 </div>
 
 <script>
+  // Dynamic year
+  const fy = document.getElementById('footer-year');
+  if(fy) fy.textContent = new Date().getFullYear();
+
   // Cursor
   const cursor = document.getElementById('cursor');
   document.addEventListener('mousemove', e => {
@@ -1068,8 +1080,9 @@
   const aboutBg     = document.getElementById('about-bg');
   const aboutText   = document.getElementById('about-text');
 
-  let curX=0, targetX=0;
+  let curX=0, targetX=0, isNavScroll=false;
   const EASE=0.072;
+  const EASE_SCROLL=0.028;
 
   function getMax(){
     let w=0; panels.forEach(p=>w+=p.offsetWidth);
@@ -1091,8 +1104,9 @@
     return acc;
   }
 
-  function goTo(idx){
+  function goTo(idx,src){
     targetX=Math.max(0,Math.min(getPanelStart(idx),getMax()));
+    isNavScroll=src||'wheel';
   }
   window.goTo=goTo;
 
@@ -1116,7 +1130,9 @@
 
   function tick(){
     if(isMobile()){window._rafId=requestAnimationFrame(tick);return;}
-    curX+=(targetX-curX)*EASE;
+    const ease = isNavScroll === 'nav' ? EASE : EASE_SCROLL;
+    curX+=(targetX-curX)*ease;
+    if(Math.abs(targetX-curX)<0.5){ curX=targetX; isNavScroll=false; }
     if(Math.abs(targetX-curX)<.25) curX=targetX;
 
     sc.style.transform=`translateX(${-curX}px)`;
@@ -1197,7 +1213,15 @@
     if(document.getElementById('legal-overlay').style.display==='block') return;
     e.preventDefault();
     const d=Math.abs(e.deltaY)>Math.abs(e.deltaX)?e.deltaY:e.deltaX;
-    targetX=Math.max(0,Math.min(targetX+d*1.15,getMax()));
+    if(Math.abs(d)<3) return; // ignore tiny movements
+    // Snap to next/prev panel
+    const dir = d>0 ? 1 : -1;
+    const currentPanel = panels.findIndex((_,i)=>
+      getPanelStart(i) > curX + 10
+    );
+    const current = currentPanel > 0 ? currentPanel - 1 : panels.length - 1;
+    const next = Math.max(0, Math.min(panels.length-1, current + dir));
+    goTo(next);
   },{passive:false});
 
   // Touch
@@ -1332,7 +1356,7 @@
     const g=galItems[idx];
     lbi.src=g.dataset.src;
     lbn.textContent=g.dataset.name;
-    lbct.textContent=g.dataset.cat+' · '+g.dataset.year;
+    lbct.textContent=g.dataset.cat;
     resetZoom(); originX=50; originY=50;
     lb.classList.add('open');
   }
